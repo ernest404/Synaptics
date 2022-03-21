@@ -1,5 +1,5 @@
 from nltk.tokenize import sent_tokenize, RegexpTokenizer
-from nltk.stem.snowball import RussianStemmer
+from nltk.stem.snowball import SnowballStemmer
 from nltk.corpus import stopwords
 from collections import Counter
 import numpy as np
@@ -13,12 +13,12 @@ class LexRankSummarizer:
     def __init__(self, n_sentences):
         self.n_sentences = n_sentences
         self.tokenizer = RegexpTokenizer(r'\w+')
-        self.lmtzr = RussianStemmer()
+        self.stemmer = SnowballStemmer("english")
         self.stop_words = stopwords.words('english')
 
     def __call__(self, text):
         sentences = sent_tokenize(text)
-        sent_words = [set(self.lmtzr.stem(word) for word in self.tokenizer.tokenize(sentence.lower())
+        sent_words = [set(self.stemmer.stem(word) for word in self.tokenizer.tokenize(sentence.lower())
                            if word not in self.stop_words) for sentence in sentences]
 
 
