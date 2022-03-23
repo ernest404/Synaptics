@@ -42,7 +42,7 @@ def submit():
     
     # Remove any duplicates from the list
     summary_list = list(dict.fromkeys(summary_list))
-    return render_template("summarize.html", filename=uploaded_file.filename, summary_list = articles)
+    return render_template("summarize.html", filename=uploaded_file.filename, summary_list = summary_list)
 
 if __name__ == "__main__":
     nltk.download('stopwords')
