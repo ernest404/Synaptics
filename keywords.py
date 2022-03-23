@@ -71,7 +71,7 @@ def extract_keywords(doc):
 
     # Get top 20 important words in the document
     def get_top_n(dict_elem):
-        result = dict(sorted(dict_elem.items(), key = itemgetter(1), reverse = True)[:20]) 
+        result = dict(sorted(dict_elem.items(), key = itemgetter(1), reverse = True)[:40]) 
         return result
     keywords = get_top_n(tf_idf_score).keys()
     return keywords

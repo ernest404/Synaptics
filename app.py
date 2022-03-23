@@ -35,9 +35,14 @@ def submit():
     # news =  send_from_directory(app.config['UPLOAD_FOLDER'], f.filename)
     # Invoke lexical summarizer 
     lr = lex_rank.LexRankSummarizer(n_sentences)
-    summary = lr(articles[0])
 
-    return render_template("summarize.html", filename=uploaded_file.filename, summary=summary)
+    summary_list = []
+    for article in articles:
+        summary_list.append(lr(article))
+    
+    # Remove any duplicates from the list
+    summary_list = list(dict.fromkeys(summary_list))
+    return render_template("summarize.html", filename=uploaded_file.filename, summary_list = articles)
 
 if __name__ == "__main__":
     nltk.download('stopwords')

@@ -18,7 +18,7 @@
                 <p class="comment_form_field">
                     <label for="id_sentences">Sentences:</label>
                 </p>
-                <input id="id_sentences" min="1" name="sentences" type="number" value="3" class="selector form-control text-center" />
+                <input id="id_sentences" min="1" name="sentences" type="number" value="4" class="selector form-control text-center" />
             </div>
         </div>
 
@@ -28,11 +28,58 @@
         
     </div>
     </form>
+  
     <div class="result">
         <p class="comment_form_field">
             <label for="id_res">Summary:</label>
         </p>
-        <textarea cols="80" id="id_text" max_length="3000" class="form-control" name="result" rows="10" readonly>{{ summary }}</textarea>
+        <div class="carousel-wrapper">
+            {% for i in range(1, summary_list|length) %}
+            <span id="item-{{i}}"></span>
+            {%endfor%}
+     
+            {% for summary in summary_list %}
+            
+            <div class="carousel-item item-{{loop.index}}">
+              <h2>Summary {{loop.index}}</h2>
+              <p>{{ summary }}</p>
+              <a class="arrow arrow-prev" href="#item-{{loop.index-1}}"></a>
+              <a class="arrow arrow-next" href="#item-{{loop.index+1}}"></a>
+            </div>
+            {% endfor %}
+    
+          </div> 
     </div>
+
+
+
+    <!-- <div class="carousel-wrapper">
+        <span id="item-1"></span>
+        <span id="item-2"></span>
+        <span id="item-3"></span>
+        <div class="carousel-item item-1">
+          <h2>Item 1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus   accumsan pretium dolor vel convallis. Aliquam erat volutpat. Maecenas lacus nunc, imperdiet sed mi et, finibus suscipit mi.</p>
+          <a class="arrow arrow-prev" href="#item-3"></a>
+          <a class="arrow arrow-next" href="#item-2"></a>
+        </div>
+        
+        <div class="carousel-item item-2">
+          <h2>Item 2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat.</p>
+          <a class="arrow arrow-prev" href="#item-1"></a>
+          <a class="arrow arrow-next" href="#item-3"></a>
+        </div>
+        
+        <div class="carousel-item item-3">
+          <h2>Item 3</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat.</p>
+          <a class="arrow arrow-prev" href="#item-2"></a>
+          <a class="arrow arrow-next" href="#item-1"></a>
+        </div>
+      </div>
+       -->
+      
+
 
 {% endblock %}
