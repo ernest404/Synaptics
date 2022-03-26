@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from flask import Flask, render_template
 from flask import request, redirect, url_for
-from werkzeug import secure_filename
 import nltk
 import lex_rank
 import os
@@ -45,8 +44,7 @@ def submit():
     return render_template("summarize.html", filename=uploaded_file.filename, summary_list = summary_list)
 
 if __name__ == "__main__":
-    nltk.download('stopwords')
-    nltk.download('punkt')
+  
     # app.run(host="0.0.0.0")
     app.run(debug = True)
 
