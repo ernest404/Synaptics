@@ -9,10 +9,10 @@ def extract_articles(path):
         return [i for i in range(1, r2)]
 
     s = createList(pdf.page_count)
-    s = createList(pdf.page_count)
 
+    text_by_page = [(pdf.load_page(i)).get_text("text") for i in s]
 
-    text_by_page = [pdf.get_page_text(i) for i in s]
+    # text_by_page = [pdf.get_page_text(i) for i in s]
 
     x = [i for i in range(0, pdf.page_count-1)]
    
@@ -36,5 +36,3 @@ def extract_articles(path):
                     filtered_articles.append(j)
                     # print(j + '\n\n')
     return filtered_articles
-
-# print(extract_articles(pdf))
