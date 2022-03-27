@@ -23,7 +23,7 @@
         </div>
 
         <div class="form-group text-center">
-            <input type="submit" value="Summarize" class="btn btn-solid-lg mb-2" id="submit_sum" />
+            <input type="submit" value="Summarize" class="btn btn-solid-md mb-2" id="submit_sum" />
         </div>
         
     </div>
@@ -34,6 +34,7 @@
             <label for="id_res">Summary:</label>
         </p>
         <div class="carousel-wrapper">
+            {% if summary_list|length > 0 %}
             {% for i in range(1, summary_list|length) %}
             <span id="item-{{i}}"></span>
             {%endfor%}
@@ -41,14 +42,28 @@
             {% for summary in summary_list %}
             
             <div class="carousel-item item-{{loop.index}}">
-              <h2>Summary {{loop.index}}</h2>
-              <p>{{ summary }}</p>
-              <a class="arrow arrow-prev" href="#item-{{loop.index-1}}"></a>
-              <a class="arrow arrow-next" href="#item-{{loop.index+1}}"></a>
+                <div style="height: 270px;  overflow-y:auto">
+                    <h3>Summary {{loop.index}}</h3>
+                    <p>{{ summary }}</p>
+                </div>
+                {% if summary_list|length > 1 %}
+                <div class="centerh " style="margin-top: 33px;">
+                    <a href="#item-{{loop.index-1}}" class="previous round p-nbutton">&#8249;</a>
+                    <a href="#item-{{loop.index+1}}" class="next round p-nbutton">&#8250;</a>
+                </div>
+                {% endif %}
             </div>
+           
+
             {% endfor %}
+            {% else %}
+            <div class="carousel-item item-1">
+                <p  class="center">No summary !</p>
+            </div>
+            {% endif %}
+            
     
-          </div> 
+        </div> 
     </div>
 
 
