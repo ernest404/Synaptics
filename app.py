@@ -12,6 +12,10 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 def home():
     return render_template("index.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 @app.route("/analyze")
 def analyze():
     return render_template("analyze.html")
@@ -28,10 +32,10 @@ def submit():
         uploaded_file.save(os.path.join(app.config['UPLOAD_FOLDER'], "news.pdf"))
     
     articles = extract.extract_articles("uploads/news.pdf")
+
     # Request number of senetences to summarize to
     n_sentences = int(request.form.get("sentences"))
 
-    # news =  send_from_directory(app.config['UPLOAD_FOLDER'], f.filename)
     # Invoke lexical summarizer 
     lr = lex_rank.LexRankSummarizer(n_sentences)
 
@@ -41,6 +45,7 @@ def submit():
     
     # Remove any duplicates from the list
     summary_list = list(dict.fromkeys(summary_list))
+   
     return render_template("summarize.html", filename=uploaded_file.filename, summary_list = summary_list)
 
 if __name__ == "__main__":
@@ -48,15 +53,4 @@ if __name__ == "__main__":
     # app.run(host="0.0.0.0")
     app.run(debug = True)
 
-####
-import os
 
-fileitem = form['filename']
-
-# check if the file has been uploaded
-if fileitem.filename:
-	# strip the leading path from the file name
-	fn = os.path.basename(fileitem.filename)
-	
-# open read and write the file into the server
-	open(fn, 'wb').write(fileitem.file.read())
