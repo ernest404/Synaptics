@@ -9,3 +9,4 @@ Newspaper text analytics
 * numpy
 * math
 * os
+$ pip install -r requirements.txt
