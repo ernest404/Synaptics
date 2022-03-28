@@ -17,7 +17,7 @@ def extract_articles(path):
     x = [i for i in range(0, pdf.page_count-1)]
    
     triggerwords = ["Kenya Defence Forces", "KDF", "Military", "Army", "Airforce", "Navy", "National Security", "Security", "Terrorism", "Terror","Terrorist",
-                "AlShabaab","Al-Shabaab","Al Shabaab", "bandits", "shooting", "shoot", "shot", "guns", "firearms", "bomb", "bombing", "bombed", "Taliban","Department of Defence", 
+                "AlShabaab","Al-Shabaab","Al Shabaab", "bandits", "gunshot", "gun", "firearm", "bomb", "bombing", "bombed", "Taliban","Department of Defence", 
                 "militia", "threat", "Al Qaeda", "weapons", "bomber", "extremist", "extremism", "pirates"]
 
     filtered_articles = []
