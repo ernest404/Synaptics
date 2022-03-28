@@ -43,6 +43,7 @@ line-height: 50px;
 
 .navbar li a, .navbar {
     color: black !important;
+    letter-spacing: 1px;
     font-size: 14px;
     font-family: cursive;
     transition: all 0.6s 0s;
