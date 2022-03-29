@@ -205,6 +205,24 @@ font: 600 2.5rem/3rem "Montserrat", sans-serif;
     color:  #393637  ;
     text-decoration: none;
 }
+/* Small primary buttons */
+.btn-solid-sm {
+  display: inline-block;
+  padding: 0.6rem 1.4rem 0.6rem 1.4rem;
+  border: 0.063rem solid  #0ed3be  ;
+  border-radius: 0.27rem;
+  background-color:  #0ed3be  ;
+  color: #fff;
+  font: 700 0.6 rem "Montserrat", sans-serif;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-solid-sm:hover {
+  background-color: transparent;
+  color:  #0ed3be  ;
+  text-decoration: none;
+}
 
 body {
   overflow: auto;
