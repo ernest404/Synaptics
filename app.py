@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from flask import Flask, render_template
-from flask import request, redirect, url_for
-import nltk
+from flask import request, make_response,redirect, url_for
+import pdfkit 
 import lex_rank
 import os
 import extract
@@ -39,6 +39,7 @@ def submit():
     # Invoke lexical summarizer 
     lr = lex_rank.LexRankSummarizer(n_sentences)
 
+    global summary_list 
     summary_list = []
     for article in articles:
         summary_list.append(lr(article))
@@ -47,6 +48,17 @@ def submit():
     summary_list = list(dict.fromkeys(summary_list))
    
     return render_template("summarize.html", filename=uploaded_file.filename, summary_list = summary_list)
+
+@app.route("/pdf")
+def pdf():
+    html = render_template("summary.html", summary_list = summary_list)
+    pdf = pdfkit.from_string(html, False)
+    response = make_response(pdf)
+    response.headers["Content-Type"] = "application/pdf"
+    response.headers["Content-Disposition"] = "attachment; filename=summary.pdf"
+    return response
+
+
 
 if __name__ == "__main__":
   
