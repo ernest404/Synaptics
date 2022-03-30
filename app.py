@@ -5,6 +5,8 @@ import pdfkit
 import lex_rank
 import os
 import extract
+import nltk
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
@@ -63,6 +65,5 @@ def pdf():
 if __name__ == "__main__":
   
     # app.run(host="0.0.0.0")
+    nltk.download('stopwords')
     app.run(debug = True)
-
-
