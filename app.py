@@ -6,8 +6,7 @@ import lex_rank
 import os
 import extract
 import nltk
-from analyze import highlighter
-from wordcloudgen import wordcloudgen
+from analyze import highlighter, wordcloudgen
 import fitz
 
 
