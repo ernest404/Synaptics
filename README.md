@@ -1,4 +1,4 @@
 # Synaptics
 Newspaper text analytics
 
-$ pip install -r requirements.txt
+pip install -r requirements.txt
