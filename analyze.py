@@ -1,5 +1,7 @@
 import fitz
 import extract
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
 
 path = "uploads/news.pdf"
 def highlighter(path):
@@ -27,6 +29,13 @@ def highlighter(path):
 
 # highlight(path)
 
-# def visualize():
+def wordcloudgen(text):
+
+    wordcloud = WordCloud ( background_color = 'white', width = 512, height = 384 ).generate(text)
+    
+    plt.imshow(wordcloud)
+    plt.axis('off')
+    plt.savefig('static/images/World_Cloud.png')
+    return 'static/images/World_Cloud.png'
 
       
