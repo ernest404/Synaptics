@@ -8,6 +8,7 @@ import extract
 import nltk
 from analyze import highlighter, wordcloudgen
 import fitz
+import smtplib
 
 
 app = Flask(__name__)
@@ -99,6 +100,23 @@ def pdf():
     response.headers["Content-Type"] = "application/pdf"
     response.headers["Content-Disposition"] = "attachment; filename=summary.pdf"
     return response
+
+@app.route("/submitcontact", methods=["POST"])
+def submitcontact():
+    name = request.form.get("name")
+    email = request.form.get("email")
+    subject = request.form.get("subject")
+    message = request.form.get("message")
+    message2 = "Message recieved"
+
+    server = smtplib.SMTP("smtp.gmail.com", 465)
+    server.starttls()
+    server.login("ernestmuisyoo@gmail.com", "ernest5178")
+    server.sendmail("ernestmuisyoo@gmail.com", emial, message2)
+
+    return render_template("index.html")
+
+
 
 
 
