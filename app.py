@@ -103,16 +103,23 @@ def pdf():
 
 @app.route("/submitcontact", methods=["POST"])
 def submitcontact():
-    name = request.form.get("name")
-    email = request.form.get("email")
-    subject = request.form.get("subject")
-    message = request.form.get("message")
-    message2 = "Message recieved"
+    sender_name = request.form.get("name")
+    sender_email = request.form.get("email")
+    sender_subject = request.form.get("subject")
+    sender_message = request.form.get("message")
 
-    server = smtplib.SMTP("smtp.gmail.com", 465)
+    reciever_email = 'synapticke@gmail.com'
+    reciever_message = "Message recieved"
+
+    server = smtplib.SMTP("smtp.gmail.com", 25)
     server.starttls()
-    server.login("ernestmuisyoo@gmail.com", "ernest5178")
-    server.sendmail("ernestmuisyoo@gmail.com", emial, message2)
+    server.login("synapticke@gmail.com", "Synaptic404")
+
+    try:
+        server.sendmail(sender_email, reciever_email, sender_message)         
+        print ("Successfully sent email")
+    except smtplib.SMTPException:
+        print ("Error: unable to send email")
 
     return render_template("index.html")
 

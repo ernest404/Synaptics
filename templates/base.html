@@ -3,7 +3,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Synaptic</title>
-        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+        <!-- title bar icon -->
+        <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/icon type">
         
         <!-- CSS -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
@@ -33,7 +34,7 @@
                         <input type="checkbox" id="nav-button">
                         <label for="nav-button" onclick></label>
                         <ul class="nav-container">
-                            <li><a href="/" class="current">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="/analyze">Analyze</a></li>
                             <li><a href="/summarize">Summmarize</a></li>
                             <li><a href="/#about">about</a></li>

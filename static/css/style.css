@@ -356,12 +356,10 @@ blockquote p {
 
 .header-default {
   background: #2C2D31;
-  opacity: 0.9;
 }
 
 .header-home {
   background: #2C2D31;
-  opacity: 0.95;
 
 
 /*box-shadow*/
@@ -516,7 +514,7 @@ blockquote p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 260px 0 300px;
+  padding: 330px 0 300px;
   margin: 0 auto;
   text-align: center;
 }
