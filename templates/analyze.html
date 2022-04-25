@@ -1,18 +1,17 @@
 {% extends "base.html" %} 
 {% block content%}
-<div class="wrap contact" style="margin-bottom: 100px;">
+<div class="wrap contact" >
     <div class="grid grid-pad" >
-        <h2>Analyze newspaper</h2>
-        <div class="col-1-1"style="background-color: white; margin-top: 100px;" >
-            <form action="submit2" id="textform" method="post" enctype='multipart/form-data'class = " form">
+        <div style=" margin-top: 100px;">
+            <h2 class="title">
+                Analyze newspaper
+            </h2>
+        </div>        
+        <div class="col-1-1" style=" margin-top: 100px;">
+            <form action="submit2" id="textform" method="post" enctype='multipart/form-data'class = " form" >
         
                 <div class="">
                     
-                    <div>
-                        <h2 class="title">
-                            Analyze newspaper
-                        </h2>
-                    </div>
             
                     <div class="form-group " style=" margin-left: auto; margin-right: auto; width: 60%;" >
                         <p class="comment_form_field">
@@ -21,17 +20,19 @@
                         <input type = "file" name = "filename" class="comment-name" style="border: 2px solid #ebebeb;" accept=".pdf" required/>{{filename}}
                     </div>
             
-                    <div class="form-group " style="text-align: center !important;">
+                    <div class="form-group " style="text-align: center !important; margin-top: 100px;">
                         <input type="submit" value="Analyze" class="btn submit " />
                     </div>
             
                 </div>
             </form>
-            {% if filename != " " %}
+            {% if filename|length > 0 %}
             <div >
-                <a class="btn read-more" href="/download_highlighted_text" style="float: right;"><span class="icon-printer"></span>  highlighted newspaper</a>
+                <a class="btn read-more" href="/download_highlighted_text" style="float: right;"><span class="icon-printer"></span>  <span style="margin-left: 1em;">highlighted newspaper</span></a>
             </div>
-            <img src={{url}} alt="no visual">
+            <div>
+                <img src={{url}} alt="no visual"  class = "wordcloud">
+            </div>
             {% endif %}
 
             
@@ -43,7 +44,10 @@
 
 
 
-
+<script>
+    //Loader
+$(window).load()
+</script>
 
 
 
