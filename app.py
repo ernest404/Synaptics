@@ -9,6 +9,9 @@ import nltk
 from analyze import highlighter, wordcloudgen
 import fitz
 import smtplib
+from todocx import doc_builder
+from datetime import date
+
 
 
 app = Flask(__name__)
@@ -54,6 +57,10 @@ def submit_summary():
     summary_list = list(dict.fromkeys(summary_list))
     os.remove("uploads/news.pdf")
 
+    # Create a doc report
+    doc_builder(summary_list)
+
+
     return render_template("summarize.html", filename=uploaded_file.filename, summary_list = summary_list)
 
 @app.route("/submit2", methods=["POST"])
@@ -83,7 +90,7 @@ def submit_analysis():
 
 
 @app.route('/download_highlighted_text',methods=["GET","POST"])
-def downloadFile(): 
+def download_pdf(): 
     try:
        path = f'uploads/news1.pdf'
        return send_file(path, attachment_filename='news_highlighted.pdf', as_attachment=True)
@@ -92,14 +99,17 @@ def downloadFile():
     except Exception as e:
         return str(e)
 
-@app.route("/pdf")
-def pdf():
-    html = render_template("summary.html", summary_list = summary_list)
-    pdf = pdfkit.from_string(html, False)
-    response = make_response(pdf)
-    response.headers["Content-Type"] = "application/pdf"
-    response.headers["Content-Disposition"] = "attachment; filename=summary.pdf"
-    return response
+
+@app.route('/download_report',methods=["GET","POST"])
+def download_docx(): 
+    try:
+       path = f'downloads/summary report.docx'
+       return send_file(path, attachment_filename='summary report {}.docx'.format(date.today().strftime("%d-%m-%Y")), as_attachment=True)
+       os.remove('downloads/summary report.docx')
+
+    except Exception as e:
+        return str(e)
+
 
 @app.route("/submitcontact", methods=["POST"])
 def submitcontact():

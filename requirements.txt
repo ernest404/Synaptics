@@ -2,7 +2,6 @@ Flask==2.0.3
 nltk==3.7
 numpy==1.22.3
 PyMuPDF==1.19.6
-pdfkit==1.0.0
+python-docx == 0.8.11
 matplotlib
 wordcloud
-plotly

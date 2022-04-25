@@ -6,13 +6,11 @@
 
 .slider {
   position: relative;
-  margin-top: 100px;
+  margin-top: 140px;
   margin-left: 50%;
-  margin-bottom: 20px;
-
   transform: translate(-50%, -50%);
   width: 1000px;
-  height: 220px;
+  height: 250px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -27,7 +25,6 @@
   position: relative;
   top: 0;
   left: -1000px;
-  text-align: center;
 }
 
 #items.shifting {
@@ -36,15 +33,17 @@
 
 .slide {
   width: 1000px;
-  height: 220px;
+  height: 250px;
+  padding-left: 2em;
+  padding-right: 2em;
   cursor: pointer;
   float: left;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   transition: all 1s;
   position: relative;
   background: #f8f8f8;;
+  overflow-y: scroll;
 }
 
 
@@ -71,15 +70,27 @@
 
 .prev {
   background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
-  left: -20px;
+  left: -25px;
 }
 
 .next {
   background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
-  right: -20px;
+  right: -25px;
 }
 
 .prev:active,
 .next:active {
   transform: scale(0.8);
 }
+
+
+.wordcloud {
+  position: relative;
+  margin-top: 400px;
+  margin-left: 50%;
+  margin-bottom: 20px;
+
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 800px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);

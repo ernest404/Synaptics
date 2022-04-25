@@ -2,8 +2,7 @@
 {% block content%}
 <div class="wrap contact" >
     <div class="grid grid-pad" >
-        <h2>Analyze newspaper</h2>
-        <div class="col-1-1"style=" margin-top: 50px; " >
+        <div class="col-1-1" style=" margin-top: 100px;" >
             <form action="submit" id="textform" method="post" enctype='multipart/form-data'class = "summarizer">
                 <div class="summarizer">
                     <h2 class="title">
@@ -30,54 +29,43 @@
                     </div>
                     
                 </div>
-                </form>
+            </form>
+
+            <div id="slider" class="slider">
+                    
+                <div class="wrapper">
+                    
+                    <div id="items" class="items">
+                    {% if summary_list|length > 0 %}
+                    {% for summary in summary_list %}
+                    <span class="slide">
+                        <h3>Summary {{loop.index}}</h3>
+                        <p>{{ summary }}</p>
+                    </span>
+                    {% endfor %}
+                    {% else %}
+                    <span class="slide">No Summary</span>
+                    {% endif %}
+                    </div>
+                </div>
+                <a id="prev" class="control prev"></a>
+                <a id="next" class="control next"></a>
+            </div> 
+            
+            {% if summary_list|length > 0 %}
+            <div style="margin-top: -110px;" >
+                <a class="btn read-more" href="/download_report" style="float: right;"><span class="icon-printer"></span> <span style="margin-left: 1em;"> download report</span></a>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
-<div >
-    <div id="slider" class="slider">
-      
-    <div class="wrapper">
-     
-      <div id="items" class="items">
-        {% if summary_list|length > 0 %}
-        {% for summary in summary_list %}
-        <span class="slide">
-            <h3>Summary {{loop.index}}</h3>
-            <p>{{ summary }}</p>
-        </span>
-        {% endfor %}
-        {% else %}
-        <span class="slide">No Summary</span>
-        {% endif %}
-      </div>
-    </div>
-    <a id="prev" class="control prev"></a>
-    <a id="next" class="control next"></a>
-  </div>  
-</div>
 
-{% if summary_list|length > 0 %}
-<div >
-    <a class="btn read-more" href="/pdf" style="float: right;"><span class="icon-printer"></span> <span style="margin-left: 1em;"> download report</span></a>
-</div>
-{% endif %}
-  
-
-
-    <script src="{{ url_for('static', filename='js/summary.js') }}"></script>
 
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-46156385-1', 'cssscript.com');
-  ga('send', 'pageview');
+    <script src="{{ url_for('static', filename='js/summary.js') }}"></script>
 
 </script>
  
