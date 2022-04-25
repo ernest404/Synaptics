@@ -1,36 +1,51 @@
 {% extends "base.html" %} 
 {% block content%}
-
-<form action="submit2" id="textform" method="post" enctype='multipart/form-data'class = "summarizer">
-    
-    <div class="summarizer">
+<div class="wrap contact" style="margin-bottom: 100px;">
+    <div class="grid grid-pad" >
+        <h2>Analyze newspaper</h2>
+        <div class="col-1-1"style="background-color: white; margin-top: 100px;" >
+            <form action="submit2" id="textform" method="post" enctype='multipart/form-data'class = " form">
         
-        <div>
-            <h2 class="title">
-                Analyze newspaper
-            </h2>
-        </div>
+                <div class="">
+                    
+                    <div>
+                        <h2 class="title">
+                            Analyze newspaper
+                        </h2>
+                    </div>
+            
+                    <div class="form-group " style=" margin-left: auto; margin-right: auto; width: 60%;" >
+                        <p class="comment_form_field">
+                            <label for="id_text">Upload newspaper:</label>
+                        </p>
+                        <input type = "file" name = "filename" class="comment-name" style="border: 2px solid #ebebeb;" accept=".pdf" required/>{{filename}}
+                    </div>
+            
+                    <div class="form-group " style="text-align: center !important;">
+                        <input type="submit" value="Analyze" class="btn submit " />
+                    </div>
+            
+                </div>
+            </form>
+            {% if filename != " " %}
+            <div >
+                <a class="btn read-more" href="/download_highlighted_text" style="float: right;"><span class="icon-printer"></span>  highlighted newspaper</a>
+            </div>
+            <img src={{url}} alt="no visual">
+            {% endif %}
 
-        <div class="form-group " style=" margin-left: auto; margin-right: auto; width: 60%;" >
-            <p class="comment_form_field">
-                <label for="id_text">Upload newspaper:</label>
-            </p>
-            <input type = "file" name = "filename" class="form-control" accept=".pdf" required/>{{filename}}
+            
         </div>
-
-        <div class="form-group text-center">
-            <input type="submit" value="Analyze" class="btn btn-solid-md mb-2" />
-        </div>
-
     </div>
-
-</form>
-
-{% if filename != " " %}
-<div >
-    <a class="btn-solid-sm" href="/download_highlighted_text" style="float: right;"><span class="glyphicon glyphicon-print"></span> highlighted newspaper</a>
 </div>
-{% endif %}
 
-<img src={{url}} alt="">
+
+
+
+
+
+
+
+
+
 {% endblock %}

@@ -1,73 +1,85 @@
 {% extends "base.html" %} 
 {% block content%}
-
-<form action="submit" id="textform" method="post" enctype='multipart/form-data'class = "summarizer">
-    <div class="summarizer">
-        <h2 class="title">
-            Summarize your article
-        </h2>
-
-        <div class="row">
-            <div class="form-group col-md-6 ">
-                <p class="comment_form_field">
-                    <label for="id_text">Upload newspaper:</label>
-                </p>
-                <input type = "file" name = "filename" class="form-control" accept=".pdf" required/>{{filename}}
-            </div>
-            <div class="form-group col-md-6">
-                <p class="comment_form_field">
-                    <label for="id_sentences">Sentences:</label>
-                </p>
-                <input id="id_sentences" min="1" name="sentences" type="number" value="4" class="selector form-control text-center" />
-            </div>
-        </div>
-
-        <div class="form-group text-center">
-            <input type="submit" value="Summarize" class="btn btn-solid-md mb-2" />
-        </div>
-        
-    </div>
-    </form>
-  
-    <div class="result">
-        <p class="comment_form_field">
-            <label for="id_res">Summary:</label>
-        </p>
-        <div class="summary-wrapper">
-            {% if summary_list|length > 0 %}
-            {% for i in range(1, summary_list|length) %}
-            <span id="item-{{i}}"></span>
-            {%endfor%}
-     
-            {% for summary in summary_list %}
+<div class="wrap contact" >
+    <div class="grid grid-pad" >
+        <h2>Analyze newspaper</h2>
+        <div class="col-1-1"style=" margin-top: 50px; " >
+            <form action="submit" id="textform" method="post" enctype='multipart/form-data'class = "summarizer">
+                <div class="summarizer">
+                    <h2 class="title">
+                        Summarize your article
+                    </h2>
             
-            <div class="summary-item item-{{loop.index}}">
-                <div style="height: 270px;  overflow-y:auto">
-                    <h3>Summary {{loop.index}}</h3>
-                    <p>{{ summary }}</p>
+                    <div class="row">
+                        <div class="form-group col-md-6 ">
+                            <p class="comment_form_field">
+                                <label for="id_text">Upload newspaper:</label>
+                            </p>
+                            <input type = "file" name = "filename"  accept=".pdf" required/>{{filename}}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <p class="comment_form_field">
+                                <label for="id_sentences">Sentences:</label>
+                            </p>
+                            <input id="id_sentences" min="1" name="sentences" type="number" value="4" class="selector form-control text-center" />
+                        </div>
+                    </div>
+            
+                    <div class="form-group text-center">
+                        <input type="submit" value="Summarize" class="btn btn-solid-md mb-2" />
+                    </div>
+                    
                 </div>
-                {% if summary_list|length > 1 %}
-                <div class="centerh " style="margin-top: 33px;">
-                    <a href="#item-{{loop.index-1}}" class="previous round p-nbutton">&#8249;</a>
-                    <a href="#item-{{loop.index+1}}" class="next round p-nbutton">&#8250;</a>
-                </div>
-                
-                {% endif %}
-            </div>
-
-            {% endfor %}
-            {% else %}
-            <div class="summary-item item-1">
-                <p  class="center">No summary !</p>
-            </div>
-            {% endif %}
-           
-        </div> 
+                </form>
+        </div>
+    </div>
 </div>
+<div >
+    <div id="slider" class="slider">
+      
+    <div class="wrapper">
+     
+      <div id="items" class="items">
+        {% if summary_list|length > 0 %}
+        {% for summary in summary_list %}
+        <span class="slide">
+            <h3>Summary {{loop.index}}</h3>
+            <p>{{ summary }}</p>
+        </span>
+        {% endfor %}
+        {% else %}
+        <span class="slide">No Summary</span>
+        {% endif %}
+      </div>
+    </div>
+    <a id="prev" class="control prev"></a>
+    <a id="next" class="control next"></a>
+  </div>  
+</div>
+
 {% if summary_list|length > 0 %}
 <div >
-    <a class="btn-solid-sm" href="/pdf" style="float: right;"><span class="glyphicon glyphicon-print"></span> download report</a>
+    <a class="btn read-more" href="/pdf" style="float: right;"><span class="icon-printer"></span> <span style="margin-left: 1em;"> download report</span></a>
 </div>
 {% endif %}
+  
+
+
+    <script src="{{ url_for('static', filename='js/summary.js') }}"></script>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>
+ 
 
 {% endblock %}

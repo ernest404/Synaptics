@@ -32,6 +32,7 @@ Grey #ECF0F1
   box-sizing: border-box;
 }
 
+
 .wrap {
   width: 100%;
   padding: 3.5em 0;
@@ -155,6 +156,9 @@ blockquote p {
 /* *********************************************************
   Buttons 
 ********************************************************* */
+input[type=button], input[type=submit], input[type=reset] {
+  border: none;
+}
 
 .btn {
   position: relative;
@@ -786,7 +790,7 @@ ul.nested-comments  ul li {
 }
 /* Inputs */
 
-input:not([type=submit]):not([type=file]), textarea {
+input:not([type=submit]), textarea {
   width: 100% !important;
   height: 50px;
   margin-bottom: 25px;
@@ -812,8 +816,7 @@ textarea {
   min-height: 150px;
   padding: 15px;
 }
-
-.submit {
+.comment-submit{
   font-size: 1.1em;
   position: relative;
   width: 190px;
@@ -824,6 +827,22 @@ textarea {
   vertical-align: top;
   border: 0;
   float: right;
+}
+.submit {
+  font-size: 1.1em;
+  position: relative;
+  width: 190px;
+  height: 45px;
+  margin-bottom: 2em;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: top;
+  border: 0;
+
+}
+
+.comment-submit:active {
+  outline: none;
 }
 
 .submit:active {
@@ -1288,7 +1307,6 @@ footer p, footer a {
     opacity: 1;
   }
 
-  .team-social a i {
-    font-size: 1.5em;
-    padding: 8px;
-  }
+
+
+  
