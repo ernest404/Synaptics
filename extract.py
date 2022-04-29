@@ -26,8 +26,7 @@ def extract_articles(path):
         text_by_page[i] = text_by_page[i].replace('-', '')
         text_by_page[i] = text_by_page[i].replace('�', '')
         text_by_page[i] = text_by_page[i].replace('  ', '\n')
-        text_by_page[i] = text_by_page[i].replace('@PeopleDailyKe', '\n\n')
-        text_by_page[i] = text_by_page[i].split('\n\n')
+        text_by_page[i] = text_by_page[i].split('@PeopleDailyKe')
 
         for j in text_by_page[i]:
             keyword = keywords.extract_keywords(j)
