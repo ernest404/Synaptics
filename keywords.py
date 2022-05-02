@@ -18,7 +18,7 @@ def extract_keywords(doc):
     # Define stopwords
     stop_words = set(stopwords.words('english')) 
 
-    # Step 1 : Find total words in the text
+    # Step 1 : Find total words in the article
     total_words = doc.split()
     total_word_length = len(total_words)
 

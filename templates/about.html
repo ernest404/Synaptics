@@ -1,5 +1,429 @@
-{% extends "base2.html" %} 
-{% block content%}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Synaptic</title>
+        <!-- title bar icon -->
+        <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/icon type">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/simplegrid.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/lightcase.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='js/owl-carousel/owl.carousel.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='js/owl-carousel/owl.theme.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='js/owl-carousel/owl.transitions.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/summary.css') }}">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
 
 
-{% endblock %}
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+        <!-- Google Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+    </head>
+    <body>
+      <!-- Header -->
+      <header id="top-header" class="header-home">
+        <div class="grid">
+            <div class="col-1-1">
+                <div class="content">
+                    <div class="logo-wrap">
+                        <a href="/" class="logo"><h3>Synaptic</h3></a>
+                    </div>
+                    <nav class="navigation">
+                        <input type="checkbox" id="nav-button">
+                        <label for="nav-button" onclick></label>
+                        <ul class="nav-container">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/analyze">Analyze</a></li>
+                            <li><a href="/summarize">Summmarize</a></li>
+                            <li><a href="/about">about</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+      </header>
+    <!-- End Header -->
+
+<!-- Services Section -->
+<div class="wrap grey services-wrap" >
+    <section class="grid grid-pad services">
+        <div style=" margin-top: 100px; margin-bottom: 50px;">
+            <h2>Our Services</h2>
+        </div>
+        
+        <div class="col-1-4 service-box service-1" >
+            <div class="content">
+                <div class="service-icon">
+                    <i class="circle-icon icon-stats"></i>
+                </div>
+                <div class="service-entry">
+                    <h3>Analysis</h3>
+                    <p>Text analysis is a machine learning technique used to automatically extract valuable insights from unstructured text data.</p>
+                    <a class="btn read-more" href="#0">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-1-4 service-box service-2" >
+            <div class="content">
+                <div class="service-icon">
+                    <i class="circle-icon icon-file3"></i>
+                </div>
+                <div class="service-entry">
+                    <h3>Summarization</h3>
+                    <p>Text summarizer is a machine learning technique  that condenses a long article into main points of specific number sentences.</p>
+                    <a class="btn read-more" href="#0">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-1-4 service-box service-3">
+            <div class="content">
+                <div class="service-icon">
+                    <i class="circle-icon icon-filter"></i>
+                </div>
+                <div class="service-entry">
+                    <h3>Filtering</h3>
+                    <p>Filtering articles allows you to only get articles of interest from a newspaper, saving you time used to skim through a newspaper.</p>
+                    <a class="btn read-more" href="#0">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-1-4 service-box service-4" >
+            <div class="content">
+                <div class="service-icon">
+                    <i class="circle-icon icon-pencil2"></i>
+                </div>
+                <div class="service-entry">
+                    <h3>Highlighting</h3>
+                    <p>Highlighting text allows for faster skimming of articles of interest.Enjoy colorful syntax highlighting for natural languages.</p>
+                    <a class="btn read-more" href="#0">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- End Services Section -->
+
+<!-- CurveDown -->
+<svg class="curvedownColor curveGrey" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
+</svg>
+
+
+
+  <!-- Quotes Section -->
+<div class="wrap services-wrap " >
+    <section class="grid grid-pad">
+        <div class="col-1-1 service-box cl-client-carousel-container">
+            <div class="content">
+                <div class="cl-client-carousel">
+                    
+                    <div class="item client-carousel-item"><!-- Start of item -->
+                    <div class="quotes-icon">
+                        <i class="icon-quotes-left"></i>
+                    </div>
+                    <p>Synaptic is an extraordinary, awesome Theme, I would recommend this Theme to anyone for their next project. Go ahead and download it now!</p>
+                    <h4>-David Bell</h4>
+                    </div><!-- End of item -->
+                    
+                    <div class="item client-carousel-item"><!-- Start of item -->
+                    <div class="quotes-icon">
+                        <i class="icon-quotes-left"></i>
+                    </div>
+                    <p>The good times are for those who take action. The7 is a simple and easy to use template for creative people. Download this theme and give it a try!</p>
+                    <h4>-Eve Stinger</h4>
+                    </div><!-- End of item -->
+                    <div class="item client-carousel-item"><!-- Start of item -->
+                    <div class="quotes-icon">
+                        <i class="icon-quotes-left"></i>
+                    </div>
+                    <p>Awesome theme! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus incidunt possimus eveniet aperiam, minus deleniti iure ipsa praesentium amet, labore voluptatum fugit earum, porro non sequi sint soluta reprehenderit ad?</p>
+                    <h4>-Will Peters</h4>
+                    </div><!-- End of item -->
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- End Quotes Section -->
+
+ <!-- CurveDown -->
+<svg class="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
+</svg>
+
+
+    <!-- Parallax Section - Counter -->
+    <div class="parallax-section parallax2" id="about">                    
+        <div class="wrap">
+            <section class="grid grid-pad callout">
+                <div class="col-1-3">
+                    <div class="content" >
+                    <div class="info-counter">
+                            <div class="info-counter-row">
+                                <i class="info-counter-icon icon-mug"></i>
+                            </div>
+                            <div class="info-counter-content">
+                                <h5 class="info-counter-number">
+                                <span class="counter">55</span>
+                                <span class="info-counter-units">Cups</span>
+                                </h5>
+                            <div class="info-counter-text">Average weekly coffee drank</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-3">
+                    <div class="content" >
+                    <div class="info-counter">
+                            <div class="info-counter-row">
+                                <i class="info-counter-icon icon-embed"></i>
+                            </div>
+                            <div class="info-counter-content">
+                                <h5 class="info-counter-number">
+                                <span class="counter">9000</span>
+                                <span class="info-counter-units">Lines</span>
+                                </h5>
+                            <div class="info-counter-text">Average weekly lines of code</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1-3">
+                    <div class="content" >
+                    <div class="info-counter">
+                            <div class="info-counter-row">
+                                <i class="info-counter-icon icon-trophy"></i>
+                            </div>
+                            <div class="info-counter-content">
+                                <h5 class="info-counter-number">
+                                <span class="counter">400</span>
+                                <span class="info-counter-units">Customers</span>
+                                </h5>
+                            <div class="info-counter-text">Average yearly happy clients</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- End Parallax Section -->
+
+    <!-- CurveUp -->
+    <svg class="curveUpColor curveGrey"  xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+    </svg>
+
+    <!-- Team Section -->
+    <div class="wrap team-wrap grey" >
+        <div class="grid grid-pad">
+            <div class="content" >
+                <h2>Our Team</h2>
+                <div class="col-1-4" >
+                    <div class="content staff-content">
+                        <div class="recent-work staff-img">
+                            <div class="img-wrap staff-img">
+                                <img src="static/images/team/user2.png" alt="">
+                                <div class="team-social">
+                                    <a class="sl-fb" href="#"><i class="icon-facebook"></i></a>
+                                    <a class="sl-tw" href="#"><i class="icon-twitter"></i></a>
+                                    <a class="sl-gp" href="#"><i class="icon-googleplus2"></i></a>
+                                    <a class="sl-ln" href="#"><i class="icon-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="work-info staff-info">
+                                <h5>Tim Malkovic</h5>
+                                <span>CEO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-4" >
+                    <div class="content staff-content">
+                        <div class="recent-work staff-img">
+                            <div class="img-wrap staff-img">
+                                <img src="static/images/team/user1.png" alt="">
+                                <div class="team-social">
+                                    <a class="sl-fb" href="#"><i class="icon-facebook"></i></a>
+                                    <a class="sl-tw" href="#"><i class="icon-twitter"></i></a>
+                                    <a class="sl-gp" href="#"><i class="icon-googleplus2"></i></a>
+                                    <a class="sl-ln" href="#"><i class="icon-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="work-info staff-info">
+                                <h5>David Bell</h5>
+                                <span>Creative Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-1-4" >
+                    <div class="content staff-content">
+                        <div class="recent-work staff-img">
+                            <div class="img-wrap staff-img">
+                                <img src="static/images/team/user3.png" alt="">
+                                <div class="team-social">
+                                    <a class="sl-fb" href="#"><i class="icon-facebook"></i></a>
+                                    <a class="sl-tw" href="#"><i class="icon-twitter"></i></a>
+                                    <a class="sl-gp" href="#"><i class="icon-googleplus2"></i></a>
+                                    <a class="sl-ln" href="#"><i class="icon-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="work-info staff-info">
+                                <h5>Eve Stinger</h5>
+                                <span>Sales Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-1-4" >
+                    <div class="content staff-content">
+                        <div class="recent-work staff-img">
+                            <div class="img-wrap staff-img">
+                                <img src="static/images/team/user4.png" alt="">
+                                <div class="team-social">
+                                    <a class="sl-fb" href="#"><i class="icon-facebook"></i></a>
+                                    <a class="sl-tw" href="#"><i class="icon-twitter"></i></a>
+                                    <a class="sl-gp" href="#"><i class="icon-googleplus2"></i></a>
+                                    <a class="sl-ln" href="#"><i class="icon-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="work-info staff-info">
+                                <h5>Will Peters</h5>
+                                <span>Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Team Section -->
+
+    <!-- CurveDown -->
+    <svg class="curvedownColor curveGrey" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
+    </svg>
+
+   <!-- Footer -->
+   <footer class="wrap">
+    <div class="grid grid-pad" >
+        <div class="col-1-4">
+            <div class="content">
+                <div class="footer-widget">
+                    <h3>About</h3>
+                    <div class="textwidget">
+                        <p>We are an AI company based in Nairobi, Kenya founded in the year 2022.</p><br>
+                        <p>By Jamal Mohamed (MSC) .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1-4" >
+            <div class="content">
+                <div class="footer-widget">
+                    <h3>Solutions</h3>
+                    <div class="fwidget">
+                        <ul>
+                            <li><a href="/analyze">Analyse</a></li>
+                            <li><a href="/summarize">Summarize</a></li>
+                            <li><a href="/analyze">Highlight</a></li>
+                            <li><a href="#0">Filter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1-4" >
+            <div class="content">
+                <div class="footer-widget">
+                    <h3>More info</h3>
+                    <div class="textwidget">
+                        <p>Our founder is an experienced Co-Founder with a demonstrated history of working in the information technology and services industry. 
+                            Skilled in Management, Teamwork, Strategic Planning, Team Leadership, and Microsoft Office Suite. 
+                             </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1-4" >
+            <div class="content">
+                <div class="footer-widget">
+                    <h3>Flickr Feed</h3>
+                    <div class="flickr-widget">
+                        <ul class="flickr-list">
+                            <li><a href="#0"><img src="/static/images/flickr-widget/flickr1.jpg" alt=""></a></li>
+                            <li><a href="#0"><img src="/static/images/flickr-widget/flickr2.jpg" alt=""></a></li>
+                            <li><a href="#0"><img src="/static/images/flickr-widget/flickr3.jpg" alt=""></a></li>
+                            <li><a href="#0"><img src="/static/images/flickr-widget/flickr4.jpg" alt=""></a></li>
+                            <li><a href="#0"><img src="/static/images/flickr-widget/flickr5.jpg" alt=""></a></li>
+                            <li><a href="#0"><img src="/static/images/flickr-widget/flickr6.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="social-footer">
+        <div class="grid grid-pad">
+            <div class="col-1-1" >
+                <div class="content">
+                    <div class="social-set">
+                        <a  href="https://www.facebook.com" target="_blank"><i class="icon-facebook"></i></a>
+                        <a  href="https://www.facebook.com" target="_blank"><i class="icon-twitter"></i></a>
+                        <a  href="https://www.linkedin.com" target="_blank"><i class="icon-linkedin2"></i></a>
+                        <a  href="https://www.instagram.com/" target="_blank"><i class="icon-instagram"></i></a>
+                    </div>
+                    <p class="source-org copyright">© 2022 | All Rights Reserved Created By <a href="http://templatestock.co" target="_blank">Template Stock</a> & <a href="#team" target="_blank">Synaptic</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<div class="loader-overlay">
+    <div class="loader">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>
+
+
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/mixitup.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/smoothscroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl-carousel/owl.carousel.min.js') }}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lightcase.min.js') }}"></script>
+  </body>
+
+</html>
+   

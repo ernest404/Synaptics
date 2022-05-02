@@ -1,0 +1,57 @@
+{% extends "base.html" %} 
+{% block content%}
+
+<!-- Contact Section -->
+<div class="wrap contact"  >
+    <div class="grid grid-pad" >
+        <div style=" margin-top: 100px; margin-bottom: 50px;" >
+            <h2>Contact</h2>
+        </div>
+        
+        <div class="col-1-2"style=" margin-top: 100px;" >
+            <div class="content address">
+                <h3>Talk to us</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores iusto fugit esse soluta quae debitis quibusdam harum voluptatem, maxime, aliquam sequi. Tempora ipsum magni unde velit corporis fuga, necessitatibus blanditiis.</p>
+                <address>
+                    <div>
+                        <div class="box-icon">
+                            <i class="icon-location"></i>
+                        </div>
+                        <span>Address:</span>
+                        <p>Nairobi, Westlands, 232 Madonna house</p>
+                    </div>
+                    
+                    <div>
+                        <div class="box-icon">
+                            <i class="icon-clock"></i>
+                        </div>
+                        <span>Work Time:</span>
+                        <p>Monday - Friday from 8am to 5pm</p>
+                    </div>
+                    
+                    <div>
+                        <div class="box-icon">
+                            <i class="icon-phone"></i>
+                        </div>
+                        <span>Phone:</span>
+                        <p>+254712345678</p>
+                    </div>                                  
+                </address>
+            </div>
+        </div>
+         <div class="col-1-2 pleft-25" >
+            <div class="content contact-form">
+                <form class="form" action="submitcontact" id="textform" method="post" enctype='multipart/form-data'>
+                    <input type="text" class="comment-name" placeholder="Name*" name = "name" required >
+                    <input type="email" class="comment-email" placeholder="Email*" name = "email" required>
+                    <input type="text" class="comment-subject" placeholder="Subject" name = "subject">
+                    <textarea class="required comment-text" placeholder="Message..." name = "message" required></textarea>
+                    <input type="submit" value="Send Message" class="btn comment-submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Contact Section -->
+
+{% endblock %}
