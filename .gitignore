@@ -1,2 +1,7 @@
 summarizeold.html
 extract2.py
+__pycache__/analyze.cpython-310.pyc
+__pycache__/extract.cpython-310.pyc
+__pycache__/keywords.cpython-310.pyc
+__pycache__/lex_rank.cpython-310.pyc
+__pycache__/todocx.cpython-310.pyc

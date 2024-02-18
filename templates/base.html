@@ -1,174 +1,131 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>Synaptic</title>
-        <!-- title bar icon -->
-        <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/icon type">
-        
-        <!-- CSS -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/simplegrid.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/lightcase.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='js/owl-carousel/owl.carousel.css') }}" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='js/owl-carousel/owl.theme.css') }}" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='js/owl-carousel/owl.transitions.css') }}" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/summary.css') }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Synaptic</title>
+    <!-- title bar icon -->
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/favicon.png') }}"
+      type="image/icon type"
+    />
 
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-        <link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/simplegrid.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/icomoon.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/lightcase.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='js/owl-carousel/owl.carousel.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='js/owl-carousel/owl.theme.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='js/owl-carousel/owl.transitions.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/summary.css') }}"
+    />
 
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.css') }}"
+    />
+    <link
+      href="https://www.cssscript.com/wp-includes/css/sticky.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-        
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
 
-
-        <!-- Google Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-
-    </head>
-    <body>
-      <!-- Header -->
-      <header id="top-header" class="header-home">
-        <div class="grid">
-            <div class="col-1-1">
-                <div class="content">
-                    <div class="logo-wrap">
-                        <a href="/" class="logo"><h3>Synaptic</h3></a>
-                    </div>
-                    <nav class="navigation">
-                        <input type="checkbox" id="nav-button">
-                        <label for="nav-button" onclick></label>
-                        <ul class="nav-container">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/analyze">Analyze</a></li>
-                            <li><a href="/summarize">Summmarize</a></li>
-                            <li><a href="/about">about</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
+    <!-- Google Fonts -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="top-header" class="header-home">
+      <div class="grid">
+        <div class="col-1-1">
+          <div class="content">
+            <div class="logo-wrap">
+              <a href="/" class="logo"><h3>Synaptic</h3></a>
             </div>
+            <nav class="navigation">
+              <input type="checkbox" id="nav-button" />
+              <label for="nav-button" onclick></label>
+              <ul class="nav-container">
+                <li><a href="/">Home</a></li>
+                <li><a href="/analyze">Analyze</a></li>
+                <li><a href="/summarize">Summmarize</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </header>
+      </div>
+    </header>
     <!-- End Header -->
 
     {% block content %} {% endblock %}
 
-    <!-- CurveDown -->
-    <svg class="curveDownColor"  xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
-    </svg>
-
-    <!-- Footer -->
-    <footer class="wrap">
-      <div class="grid grid-pad" >
-          <div class="col-1-4">
-              <div class="content">
-                  <div class="footer-widget">
-                      <h3>About</h3>
-                      <div class="textwidget">
-                          <p>We are an AI company based in Nairobi, Kenya founded in the year 2022.</p><br>
-                          <p>By Jamal Mohamed (MSC) .</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-1-4" >
-              <div class="content">
-                  <div class="footer-widget">
-                      <h3>Solutions</h3>
-                      <div class="fwidget">
-                          <ul>
-                              <li><a href="/analyze">Analyse</a></li>
-                              <li><a href="/summarize">Summarize</a></li>
-                              <li><a href="/analyze">Highlight</a></li>
-                              <li><a href="#0">Filter</a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-1-4" >
-              <div class="content">
-                  <div class="footer-widget">
-                      <h3>More info</h3>
-                      <div class="textwidget">
-                          <p>Our founder is an experienced Co-Founder with a demonstrated history of working in the information technology and services industry. 
-                              Skilled in Management, Teamwork, Strategic Planning, Team Leadership, and Microsoft Office Suite. 
-                               </p>
-                          <br>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-1-4" >
-              <div class="content">
-                  <div class="footer-widget">
-                      <h3>Flickr Feed</h3>
-                      <div class="flickr-widget">
-                          <ul class="flickr-list">
-                              <li><a href="#0"><img src="/static/images/flickr-widget/flickr1.jpg" alt=""></a></li>
-                              <li><a href="#0"><img src="/static/images/flickr-widget/flickr2.jpg" alt=""></a></li>
-                              <li><a href="#0"><img src="/static/images/flickr-widget/flickr3.jpg" alt=""></a></li>
-                              <li><a href="#0"><img src="/static/images/flickr-widget/flickr4.jpg" alt=""></a></li>
-                              <li><a href="#0"><img src="/static/images/flickr-widget/flickr5.jpg" alt=""></a></li>
-                              <li><a href="#0"><img src="/static/images/flickr-widget/flickr6.jpg" alt=""></a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="social-footer">
-          <div class="grid grid-pad">
-              <div class="col-1-1" >
-                  <div class="content">
-                      <div class="social-set">
-                          <a  href="https://www.facebook.com" target="_blank"><i class="icon-facebook"></i></a>
-                          <a  href="https://www.facebook.com" target="_blank"><i class="icon-twitter"></i></a>
-                          <a  href="https://www.linkedin.com" target="_blank"><i class="icon-linkedin2"></i></a>
-                          <a  href="https://www.instagram.com/" target="_blank"><i class="icon-instagram"></i></a>
-                      </div>
-                      <p class="source-org copyright">© 2022 | All Rights Reserved Created By <a href="http://templatestock.co" target="_blank">Template Stock</a> & <a href="#team" target="_blank">Synaptic</a></p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </footer>
-  <!-- End Footer -->
-
-  <div class="loader-overlay">
+    <div class="loader-overlay">
       <div class="loader">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
       </div>
-  </div>
+    </div>
 
-
-
-      <!-- JS -->
-      <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/mixitup.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/smoothscroll.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/jquery.nav.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/owl-carousel/owl.carousel.min.js') }}"></script>
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-      <script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/lightcase.min.js') }}"></script>
-    </body>
-
-    </html>
-
-
-
-
-
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/mixitup.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/smoothscroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl-carousel/owl.carousel.min.js') }}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lightcase.min.js') }}"></script>
+  </body>
+</html>
